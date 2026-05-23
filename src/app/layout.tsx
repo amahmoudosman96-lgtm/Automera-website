@@ -54,10 +54,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon-white.svg', type: 'image/svg+xml' },
+      { url: '/favicon-white.png', type: 'image/png' },
     ],
-    shortcut: '/favicon-white.svg',
-    apple: '/favicon-white.svg',
+    shortcut: '/favicon-white.png',
+    apple: '/favicon-white.png',
   },
 }
 

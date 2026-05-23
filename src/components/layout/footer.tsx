@@ -30,11 +30,11 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="inline-flex items-center" aria-label="Automera home">
               <Image
-                src="/automera-logo-orbit-light.svg"
+                src="/automera-logo-orbit-light.png"
                 alt="Automera"
-                width={140}
-                height={32}
-                className="h-8 w-auto"
+                width={600}
+                height={200}
+                className="h-10 w-auto"
               />
             </Link>
             <p className="text-sm text-muted leading-relaxed max-w-[200px]">
