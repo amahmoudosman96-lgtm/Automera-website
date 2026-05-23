@@ -39,7 +39,7 @@ export default async function CaseStudyPage({ params }: Props) {
         href="/cases"
         className="inline-flex items-center gap-2 text-sm text-muted hover:text-text transition-colors mb-10"
       >
-        <ArrowLeft size={16} /> All shipped products
+        <ArrowLeft size={16} /> Back to all projects
       </Link>
 
       <div className="flex flex-col gap-4 mb-10">
