@@ -43,7 +43,7 @@ export function Nav() {
             aria-label="Automera home"
           >
             <Image
-              src="/automera-logo-orbit-light.png"
+              src="/automera-logo-orbit-light.svg"
               alt="Automera"
               width={600}
               height={200}
