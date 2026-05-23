@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Case Studies',
+  title: "What we've built",
   description: "Real automation projects we've shipped for SMB teams. See what's possible.",
 }
 
@@ -17,18 +17,18 @@ export default function CasesPage() {
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-3">
           <span className="text-xs font-semibold tracking-[0.08em] uppercase text-muted">
-            Case studies
+            What we&apos;ve built
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-text tracking-tight">
             Real teams, real results
           </h1>
           <p className="text-lg text-muted leading-relaxed max-w-[480px]">
-            A selection of automation projects we've shipped. Client names changed for privacy.
+            A selection of automation projects we&apos;ve shipped. Client names changed for privacy.
           </p>
         </div>
 
         {cases.length === 0 ? (
-          <p className="text-muted">No case studies yet — check back soon.</p>
+          <p className="text-muted">Nothing shipped publicly yet — check back soon.</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {cases.map((c) => (
@@ -38,7 +38,7 @@ export default function CasesPage() {
                 className="group flex flex-col gap-4 bg-white border border-border rounded-xl p-6 hover:border-border-hover hover:shadow-[var(--shadow-card-hover)] transition-all duration-200"
               >
                 <div className="w-full h-40 bg-surface rounded-lg border border-border flex items-center justify-center">
-                  <span className="text-muted text-sm">Case study cover</span>
+                  <span className="text-muted text-sm">Project cover</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted">
                   <span>{c.date}</span>

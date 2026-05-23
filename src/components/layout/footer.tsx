@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { X, Link2 } from 'lucide-react'
 
 const footerLinks = {
@@ -11,7 +12,7 @@ const footerLinks = {
   Company: [
     { label: 'About', href: '/#why' },
     { label: 'Team', href: '/#team' },
-    { label: 'Cases', href: '/cases' },
+    { label: "What we've built", href: '/cases' },
     { label: 'Blog', href: '/blog' },
   ],
   Legal: [
@@ -27,8 +28,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="text-[18px] font-semibold text-black tracking-tight">
-              automera
+            <Link href="/" className="inline-flex items-center" aria-label="Automera home">
+              <Image
+                src="/automera-logo-orbit-light.svg"
+                alt="Automera"
+                width={600}
+                height={200}
+                className="h-14 w-auto"
+              />
             </Link>
             <p className="text-sm text-muted leading-relaxed max-w-[200px]">
               AI automation for SMB teams that need to move fast.

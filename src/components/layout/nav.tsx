@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { CalButton } from '@/components/ui/cal-button'
 import { cn } from '@/lib/utils'
@@ -9,7 +10,7 @@ import { cn } from '@/lib/utils'
 const navLinks = [
   { label: 'Services', href: '/#services' },
   { label: 'Process', href: '/#process' },
-  { label: 'Cases', href: '/cases' },
+  { label: "What we've built", href: '/cases' },
   { label: 'Blog', href: '/blog' },
 ]
 
@@ -38,9 +39,17 @@ export function Nav() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-[18px] font-semibold text-black tracking-tight hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            aria-label="Automera home"
           >
-            automera
+            <Image
+              src="/automera-logo-orbit-light.svg"
+              alt="Automera"
+              width={600}
+              height={200}
+              priority
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}

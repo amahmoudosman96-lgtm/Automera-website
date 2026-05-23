@@ -1,5 +1,4 @@
 import { Hero } from '@/components/sections/hero'
-import { Logos } from '@/components/sections/logos'
 import { Services } from '@/components/sections/services'
 import { Process } from '@/components/sections/process'
 import { CasesPreview } from '@/components/sections/cases-preview'
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Logos />
       <Services />
       <Process />
       <CasesPreview />
