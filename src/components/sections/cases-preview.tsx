@@ -15,16 +15,6 @@ const cases = [
     metricLabel: 'processing time',
     tags: ['Workflow Automation', 'AI Agents'],
   },
-  {
-    slug: 'data-pipeline-ecommerce',
-    industry: 'E-commerce',
-    client: 'D2C fashion brand',
-    challenge: 'No unified view of customer data across Shopify, CRM, and ads platforms.',
-    outcome: 'Real-time unified customer dashboard, shipped in 3 weeks.',
-    metric: '3 weeks',
-    metricLabel: 'to production',
-    tags: ['Data Pipelines', 'Custom Integrations'],
-  },
 ]
 
 export function CasesPreview() {
@@ -33,7 +23,7 @@ export function CasesPreview() {
       <div className="max-w-[1140px] mx-auto flex flex-col gap-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <SectionHeader
-            eyebrow="Case studies"
+            eyebrow="Shipped products"
             heading="Real teams, real results"
             subtext="A sample of what we've shipped. Names changed for privacy."
           />
@@ -41,7 +31,7 @@ export function CasesPreview() {
             href="/cases"
             className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline shrink-0"
           >
-            All case studies <ArrowRight size={16} />
+            All shipped products <ArrowRight size={16} />
           </Link>
         </div>
 
@@ -50,7 +40,7 @@ export function CasesPreview() {
             <Card key={c.slug} hover className="flex flex-col gap-6">
               {/* Placeholder image area */}
               <div className="w-full h-40 bg-surface rounded-lg border border-border flex items-center justify-center">
-                <span className="text-muted text-sm">Case study cover image</span>
+                <span className="text-muted text-sm">Product cover image</span>
               </div>
 
               <div className="flex flex-col gap-4">

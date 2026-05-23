@@ -8,18 +8,6 @@ const testimonials = [
     name: 'Operations Director',
     company: 'UK Logistics SMB',
   },
-  {
-    quote:
-      "I was skeptical because we'd tried other agencies. Automera was different — they asked the right questions, built exactly what we described, and handed it over clean.",
-    name: 'Founder',
-    company: 'D2C Brand, MENA',
-  },
-  {
-    quote:
-      "The data pipeline they built gives us a real-time view of everything across Shopify, our CRM, and ad platforms. Three weeks from kickoff to live dashboard.",
-    name: 'Head of Growth',
-    company: 'E-commerce Company',
-  },
 ]
 
 export function Testimonials() {
@@ -34,7 +22,7 @@ export function Testimonials() {
           className="items-center text-center mx-auto"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 max-w-2xl mx-auto gap-6">
           {testimonials.map((t, i) => (
             <Card key={i} className="flex flex-col gap-4 relative">
               {/* Quote mark */}
