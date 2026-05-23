@@ -1,0 +1,45 @@
+---
+title: "94% Reduction in Invoice Processing Time"
+date: "2026-03-10"
+excerpt: "A UK logistics SMB was spending 3 FTEs on manual invoice processing with a 12% error rate. We automated the entire flow in 3 weeks."
+author: "Automera"
+tags: ["Workflow Automation", "AI Agents", "Finance Ops"]
+coverImage: "/images/cases/invoice-automation.jpg"
+---
+
+## The challenge
+
+A mid-size UK logistics company was processing 400+ supplier invoices per week. The process required three operations staff to manually open PDFs, extract line items, cross-reference against purchase orders, and enter data into their ERP system.
+
+**The result:** 3 FTEs occupied for most of their week, a 12% error rate, and a 5-day payment cycle that was straining supplier relationships.
+
+## What we built
+
+We designed and shipped a three-stage automation pipeline:
+
+1. **Ingestion** — invoices arrive by email; an AI agent reads the PDF, extracts structured data (vendor, line items, totals, VAT), and validates against the PO database
+2. **Review layer** — flagged mismatches (price variance, missing PO reference) are surfaced in a simple Slack interface for one-click approval or rejection
+3. **ERP sync** — approved invoices are automatically posted to their NetSuite instance via API
+
+No humans touch invoices that match. Exceptions get a one-click workflow, not a multi-step manual process.
+
+## Results
+
+| Metric | Before | After |
+|---|---|---|
+| Manual processing time | ~24 hrs/week | ~1.5 hrs/week |
+| Error rate | 12% | &lt;1% |
+| Payment cycle | 5 days | 2 days |
+| Staff hours freed | 3 FTEs | — |
+
+## Timeline
+
+- **Week 1:** Discovery, API access, sample invoices analysed
+- **Week 2:** AI extraction pipeline + validation logic built
+- **Week 3:** ERP integration, review UI, team training, go-live
+
+## What they said
+
+> "We didn't believe it would work until we saw it running. Our ops team now handles exceptions in 10 minutes a day instead of spending all week on invoices."
+>
+> — Operations Director
