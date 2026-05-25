@@ -1,6 +1,7 @@
 import { CalButton } from '@/components/ui/cal-button'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { Zap, Rocket } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -9,8 +10,8 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: copy */}
           <div className="flex flex-col gap-6">
-            <span className="text-xs font-semibold tracking-[0.08em] uppercase text-muted">
-              AI Automation Agency
+            <span className="text-xs font-medium tracking-[0.08em] uppercase text-muted font-mono">
+              AI automation studio
             </span>
             <h1 className="text-5xl lg:text-6xl font-extrabold text-text tracking-tight leading-[1.05]">
               AI automation{' '}
@@ -63,11 +64,13 @@ export function Hero() {
               </div>
 
               {/* Floating cards */}
-              <div className="absolute top-8 right-4 bg-white border border-border rounded-xl px-4 py-3 shadow-[var(--shadow-card)] text-sm font-medium text-text">
-                ⚡ 3× faster workflows
+              <div className="absolute top-8 right-4 bg-white border border-border rounded-xl px-4 py-3 shadow-[var(--shadow-card)] text-sm font-medium text-text flex items-center gap-2">
+                <Zap size={16} className="text-accent" strokeWidth={2} />
+                3× faster workflows
               </div>
-              <div className="absolute bottom-8 left-4 bg-white border border-border rounded-xl px-4 py-3 shadow-[var(--shadow-card)] text-sm font-medium text-text">
-                🔧 Ships in weeks
+              <div className="absolute bottom-8 left-4 bg-white border border-border rounded-xl px-4 py-3 shadow-[var(--shadow-card)] text-sm font-medium text-text flex items-center gap-2">
+                <Rocket size={16} className="text-accent" strokeWidth={2} />
+                Ships in weeks
               </div>
             </div>
           </div>
