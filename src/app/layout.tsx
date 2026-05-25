@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Cairo } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 import Script from 'next/script'
 import './globals.css'
 
@@ -31,20 +33,11 @@ export const metadata: Metadata = {
     title: 'Automera — AI Automation for SMBs',
     description:
       'Custom AI workflows, agents, and data pipelines. Shipped in weeks. You own the code.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Automera — AI Automation for SMBs',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Automera — AI Automation for SMBs',
     description: 'Custom AI workflows, agents, and data pipelines. Shipped in weeks.',
-    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -63,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cairo.variable} h-full antialiased`}
+      className={`${inter.variable} ${cairo.variable} ${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-text font-sans">
         {children}
