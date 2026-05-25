@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Cairo } from 'next/font/google'
 import Script from 'next/script'
-import { Nav } from '@/components/layout/nav'
-import { Footer } from '@/components/layout/footer'
 import './globals.css'
 
 const inter = Inter({
@@ -68,9 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${inter.variable} ${cairo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-text font-sans">
-        <Nav />
-        <main className="flex-1 pt-16">{children}</main>
-        <Footer />
+        {children}
       </body>
       {/* Cal.com embed — auto-initialises from data-cal-link attributes */}
       <Script src="https://cal.com/embed.js" strategy="lazyOnload" />
