@@ -55,7 +55,7 @@ export function CasesPreview() {
 
                 {/* Outcome metric */}
                 <div className="flex items-baseline gap-2 border-t border-border pt-4">
-                  <span className="text-3xl font-bold text-accent">{c.metric}</span>
+                  <span className="text-3xl font-bold text-accent font-mono tabular-nums">{c.metric}</span>
                   <span className="text-sm text-muted">{c.metricLabel}</span>
                 </div>
 

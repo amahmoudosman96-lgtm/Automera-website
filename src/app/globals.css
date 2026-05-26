@@ -18,9 +18,12 @@
   --color-accent-text: #1E40AF;
   --color-black: #0A0A0A;
   --color-white: #FFFFFF;
+  --color-success: #047857;
 
   /* Typography */
   --font-sans: var(--font-inter);
+  --font-display: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
   --font-cairo: var(--font-cairo-var);
 
   /* Shadows */
@@ -63,6 +66,17 @@ details summary {
 }
 details summary::-webkit-details-marker {
   display: none;
+}
+
+/* ─── Display face for headings (Geist), body stays Inter ─── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), var(--font-inter), system-ui, sans-serif;
+}
+
+/* ─── Logo orbit-mark hover animation (used by AutomeraLogo) ─── */
+@keyframes orbit-spin-once {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* ─── Reduced motion ─── */
