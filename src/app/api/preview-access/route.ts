@@ -1,12 +1,18 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { timingSafeEqual } from 'node:crypto'
-import { SITE_ACCESS_COOKIE, SITE_ACCESS_MAX_AGE, tokenFor } from '@/lib/preview-access'
+import {
+  SITE_ACCESS_COOKIE,
+  SITE_ACCESS_MAX_AGE,
+  normalizePassword,
+  tokenFor,
+} from '@/lib/preview-access'
 
 export async function POST(req: NextRequest) {
-  const expected = process.env.SITE_PASSWORD
-  if (!expected) {
+  const expectedRaw = process.env.SITE_PASSWORD
+  if (!expectedRaw) {
     return NextResponse.json({ ok: true, disabled: true })
   }
+  const expected = normalizePassword(expectedRaw)
 
   let submitted = ''
   try {
@@ -15,12 +21,16 @@ export async function POST(req: NextRequest) {
   } catch {
     return NextResponse.json({ error: 'Invalid request.' }, { status: 400 })
   }
+  submitted = submitted.trim()
 
   const a = Buffer.from(submitted)
   const b = Buffer.from(expected)
   const matches = a.length === b.length && timingSafeEqual(a, b)
 
   if (!matches) {
+    console.warn(
+      `[preview-access] password mismatch — submitted bytes=${a.length}, expected bytes=${b.length}`
+    )
     return NextResponse.json({ error: 'Incorrect password.' }, { status: 401 })
   }
 
